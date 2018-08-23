@@ -589,10 +589,10 @@ erudite:enables a rdf:Property ;
 
 erudite:provides a rdf:Property ;
     rdfs:label "provides" ;
-    schema:domainIncludes schema:CreativeWork ;
+    schema:domainIncludes schema:Organization ;
     schema:inverseOf schema:provider ;
     schema:rangeIncludes schema:CreativeWork ;
-    rdfs:comment "Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of." .
+    rdfs:comment "Indicates that an Organization provides a CreativeWork." .
 
 erudite:syllabus a rdf:Property ;
     rdfs:label "syllabus" ;
