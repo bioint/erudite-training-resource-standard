@@ -19,19 +19,19 @@ While the predominance of our properties are from Schema.org, we do have a few E
 In our main repository at [https://github.com/bioint/erudite-training-resource-standard](https://github.com/bioint/erudite-training-resource-standard), 
 we currently provide two file types that contain the definition of ERuDIte's standard. 
 1. Turtle 
-2. CSV (in progress)
+2. CSV
 
 ## Examples
 Examples of our metadata standard in action can be found as:
 1. embedded JSON-LD snippets in the source of each resource webpage. See source of [example resource page](https://bigdatau.ini.usc.edu/resource/14783120385630643790).
 2. data exports on Zenodo - [https://doi.org/10.5281/zenodo.1214375](https://doi.org/10.5281/zenodo.1214375)
 
-### More About ERuDIte
-To learn more about ERuDIte and its aims to support continuous online learning for data science, visit [http://bigdatau.org/about_erudite](http://bigdatau.org/about_erudite).
-
 ## Contact
 We'd love to hear from you! File a bug, new feature idea, or question on our 
 [Github repository](https://github.com/bioint/erudite-training-resource-standard).
+
+### More About ERuDIte
+To learn more about ERuDIte and its aims to support continuous online learning for data science, visit [http://bigdatau.org/about_erudite](http://bigdatau.org/about_erudite).
 
 ##### This work is supported by the National Institutes of Health under Grant 1U24ES026465-01.
 
