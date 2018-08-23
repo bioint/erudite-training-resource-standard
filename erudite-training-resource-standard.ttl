@@ -1,0 +1,607 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfa: <http://www.w3.org/ns/rdfa#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix erudite: <http://www.bigdatau.org/schema#> .
+
+schema:CreativeWork a rdfs:Class ;
+    rdfs:label "CreativeWork" ;
+    dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews> ;
+    rdfs:comment "The most generic kind of creative work, including books, movies, photographs, software programs, etc." ;
+    rdfs:subClassOf schema:Thing .
+
+schema:Course a rdfs:Class ;
+    rdfs:label "Course" ;
+    rdfs:comment "A description of an educational course which may be offered as distinct instances at which take place at different times or take place at different locations, or be offered through different media or modes of study. An educational course is a sequence of one or more educational events and/or creative works which aims to build knowledge, competence or ability of learners." ;
+    rdfs:subClassOf schema:CreativeWork .
+
+schema:Thing a rdfs:Class ;
+    rdfs:label "Thing" ;
+    rdfs:comment "The most generic type of item." .
+
+schema:Person a rdfs:Class ;
+    rdfs:label "Person" ;
+    dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews> ;
+    rdfs:comment "A person (alive, dead, undead, or fictional)." ;
+    rdfs:subClassOf schema:Thing ;
+    owl:equivalentClass <http://xmlns.com/foaf/0.1/Person> .
+
+schema:Organization a rdfs:Class ;
+    rdfs:label "Organization" ;
+    rdfs:comment "An organization such as a school, NGO, corporation, club, etc." ;
+    rdfs:subClassOf schema:Thing .
+
+schema:Offer a rdfs:Class ;
+    rdfs:label "Offer" ;
+    dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+    rdfs:comment """An offer to transfer some rights to an item or to provide a service — for example, an offer to sell tickets to an event, to rent the DVD of a movie, to stream a TV show over the internet, to repair a motorcycle, or to loan a book.<br/><br/>
+
+For <a href="http://www.gs1.org/barcodes/technical/idkeys/gtin">GTIN</a>-related fields, see <a href="http://www.gs1.org/barcodes/support/check_digit_calculator">Check Digit calculator</a> and <a href="http://www.gs1us.org/resources/standards/gtin-validation-guide">validation guide</a> from <a href="http://www.gs1.org/">GS1</a>.""" ;
+    rdfs:subClassOf schema:Intangible .
+
+schema:Language a rdfs:Class ;
+    rdfs:label "Language" ;
+    rdfs:comment "Natural languages such as Spanish, Tamil, Hindi, English, etc. Formal language code tags expressed in <a href=\"https://en.wikipedia.org/wiki/IETF_language_tag\">BCP 47</a> can be used via the <a class=\"localLink\" href=\"http://schema.org/alternateName\">alternateName</a> property. The Language type previously also covered programming languages such as Scheme and Lisp, which are now best represented using <a class=\"localLink\" href=\"http://schema.org/ComputerLanguage\">ComputerLanguage</a>." ;
+    rdfs:subClassOf schema:Intangible .
+
+schema:AggregateRating a rdfs:Class ;
+    rdfs:label "AggregateRating" ;
+    rdfs:comment "The average rating based on multiple ratings or reviews." ;
+    rdfs:subClassOf schema:Rating .
+
+schema:Rating a rdfs:Class ;
+    rdfs:label "Rating" ;
+    rdfs:comment "A rating is an evaluation on a numeric scale, such as 1 to 5 stars." ;
+    rdfs:subClassOf schema:Intangible .
+
+schema:Audience a rdfs:Class ;
+    rdfs:label "Audience" ;
+    rdfs:comment "Intended audience for an item, i.e. the group for whom the item was created." ;
+    rdfs:subClassOf schema:Intangible .
+
+schema:Comment a rdfs:Class ;
+    rdfs:label "Comment" ;
+    rdfs:comment "A comment on an item - for example, a comment on a blog post. The comment's content is expressed via the <a class=\"localLink\" href=\"http://schema.org/text\">text</a> property, and its topic via <a class=\"localLink\" href=\"http://schema.org/about\">about</a>, properties shared with all CreativeWorks." ;
+    rdfs:subClassOf schema:CreativeWork .
+
+schema:DigitalDocument a rdfs:Class ;
+    rdfs:label "DigitalDocument" ;
+    rdfs:comment "An electronic file or document." ;
+    rdfs:subClassOf schema:CreativeWork .
+
+schema:PresentationDigitalDocument a rdfs:Class ;
+    rdfs:label "PresentationDigitalDocument" ;
+    rdfs:comment "A file containing slides or used for a presentation." ;
+    rdfs:subClassOf schema:DigitalDocument .
+
+schema:Intangible a rdfs:Class ;
+    rdfs:label "Intangible" ;
+    rdfs:comment "A utility class that serves as the umbrella for a number of 'intangible' things such as quantities, structured values, etc." ;
+    rdfs:subClassOf schema:Thing .
+
+schema:EducationalAudience a rdfs:Class ;
+    rdfs:label "EducationalAudience" ;
+    dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_LRMIClass> ;
+    rdfs:comment "An EducationalAudience." ;
+    rdfs:subClassOf schema:Audience .
+
+schema:MediaObject a rdfs:Class ;
+    rdfs:label "MediaObject" ;
+    rdfs:comment "A media object, such as an image, video, or audio object embedded in a web page or a downloadable dataset i.e. DataDownload. Note that a creative work may have many media objects associated with it on the same web page. For example, a page about a single song (MusicRecording) may have a music video (VideoObject), and a high and low bandwidth audio stream (2 AudioObject's)." ;
+    rdfs:subClassOf schema:CreativeWork .
+
+schema:VideoObject a rdfs:Class ;
+    rdfs:label "VideoObject" ;
+    dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews> ;
+    rdfs:comment "A video file." ;
+    rdfs:subClassOf schema:MediaObject .
+    
+schema:Duration a rdfs:Class ;
+    rdfs:label "Duration" ;
+    rdfs:comment "Quantity: Duration (use <a href=\"http://en.wikipedia.org/wiki/ISO_8601\">ISO 8601 duration format</a>)." ;
+    rdfs:subClassOf schema:Quantity .
+
+schema:Quantity a rdfs:Class ;
+    rdfs:label "Quantity" ;
+    rdfs:comment "Quantities such as distance, time, mass, weight, etc. Particular instances of say Mass are entities like '3 Kg' or '4 milligrams'." ;
+    rdfs:subClassOf schema:Intangible .
+
+schema:Intangible a rdfs:Class ;
+    rdfs:label "Intangible" ;
+    rdfs:comment "A utility class that serves as the umbrella for a number of 'intangible' things such as quantities, structured values, etc." ;
+    rdfs:subClassOf schema:Thing .
+
+schema:ImageObject a rdfs:Class ;
+    rdfs:label "ImageObject" ;
+    rdfs:comment "An image file." ;
+    rdfs:subClassOf schema:MediaObject ;
+    owl:equivalentClass <http://purl.org/dc/dcmitype/Image> .
+
+schema:Text a schema:DataType,
+        rdfs:Class ;
+    rdfs:label "Text" ;
+    rdfs:comment "Data type: Text." .
+
+schema:URL a rdfs:Class ;
+    rdfs:label "URL" ;
+    rdfs:comment "Data type: URL." ;
+    rdfs:subClassOf schema:Text .
+
+schema:DateTime a schema:DataType,
+        rdfs:Class ;
+    rdfs:label "DateTime" ;
+    rdfs:comment "A combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] (see Chapter 5.4 of ISO 8601)." .
+
+schema:Integer a rdfs:Class ;
+    rdfs:label "Integer" ;
+    rdfs:comment "Data type: Integer." ;
+    rdfs:subClassOf schema:Number .
+
+schema:Number a schema:DataType,
+        rdfs:Class ;
+    rdfs:label "Number" ;
+    rdfs:comment "Data type: Number." .
+
+schema:Date a schema:DataType,
+        rdfs:Class ;
+    rdfs:label "Date" ;
+    rdfs:comment "A date value in <a href=\"http://en.wikipedia.org/wiki/ISO_8601\">ISO 8601 date format</a>." .
+
+schema:identifier a rdf:Property ;
+    rdfs:label "identifier" ;
+    schema:domainIncludes schema:Thing ;
+    schema:rangeIncludes schema:PropertyValue,
+        schema:Text,
+        schema:URL ;
+    rdfs:comment "The identifier property represents any kind of identifier for any kind of <a class=\"localLink\" href=\"http://schema.org/Thing\">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href=\"/docs/datamodel.html#identifierBg\">background notes</a> for more details." ;
+    owl:equivalentProperty dct:identifier .
+
+schema:name a rdf:Property ;
+    rdfs:label "name" ;
+    schema:domainIncludes schema:Thing ;
+    schema:rangeIncludes schema:Text ;
+    rdfs:comment "The name of the item." ;
+    rdfs:subPropertyOf <rdfs:label> ;
+    owl:equivalentProperty dct:title .
+
+schema:alternateName a rdf:Property ;
+    rdfs:label "alternateName" ;
+    schema:domainIncludes schema:Thing ;
+    schema:rangeIncludes schema:Text ;
+    rdfs:comment "An alias for the item." .
+
+schema:description a rdf:Property ;
+    rdfs:label "description" ;
+    schema:domainIncludes schema:Thing ;
+    schema:rangeIncludes schema:Text ;
+    rdfs:comment "A description of the item." ;
+    owl:equivalentProperty dct:description .
+
+schema:url a rdf:Property ;
+    rdfs:label "url" ;
+    schema:domainIncludes schema:Thing ;
+    schema:rangeIncludes schema:URL ;
+    rdfs:comment "URL of the item." .
+
+schema:sameAs a rdf:Property ;
+    rdfs:label "sameAs" ;
+    schema:domainIncludes schema:Thing ;
+    schema:rangeIncludes schema:URL ;
+    rdfs:comment "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website." .
+
+schema:image a rdf:Property ;
+    rdfs:label "image" ;
+    schema:domainIncludes schema:Thing ;
+    schema:rangeIncludes schema:ImageObject,
+        schema:URL ;
+    rdfs:comment "An image of the item. This can be a <a class=\"localLink\" href=\"http://schema.org/URL\">URL</a> or a fully described <a class=\"localLink\" href=\"http://schema.org/ImageObject\">ImageObject</a>." .
+
+schema:givenName a rdf:Property ;
+    rdfs:label "givenName" ;
+    schema:domainIncludes schema:Person ;
+    schema:rangeIncludes schema:Text ;
+    rdfs:comment "Given name. In the U.S., the first name of a Person. This can be used along with familyName instead of the name property." .
+
+schema:additionalName a rdf:Property ;
+    rdfs:label "additionalName" ;
+    schema:domainIncludes schema:Person ;
+    schema:rangeIncludes schema:Text ;
+    rdfs:comment "An additional name for a Person, can be used for a middle name." .
+
+schema:familyName a rdf:Property ;
+    rdfs:label "familyName" ;
+    schema:domainIncludes schema:Person ;
+    schema:rangeIncludes schema:Text ;
+    rdfs:comment "Family name. In the U.S., the last name of an Person. This can be used along with givenName instead of the name property." .
+
+schema:jobTitle a rdf:Property ;
+    rdfs:label "jobTitle" ;
+    schema:domainIncludes schema:Person ;
+    schema:rangeIncludes schema:Text ;
+    rdfs:comment "The job title of the person (for example, Financial Manager)." .
+
+schema:location a rdf:Property ;
+    rdfs:label "location" ;
+    schema:domainIncludes schema:Action,
+        schema:Event,
+        schema:Organization ;
+    schema:rangeIncludes schema:Place,
+        schema:PostalAddress,
+        schema:Text ;
+    rdfs:comment "The location of for example where the event is happening, an organization is located, or where an action takes place." .
+
+schema:logo a rdf:Property ;
+    rdfs:label "logo" ;
+    dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> ;
+    schema:domainIncludes schema:Brand,
+        schema:Organization,
+        schema:Place,
+        schema:Product,
+        schema:Service ;
+    schema:rangeIncludes schema:ImageObject,
+        schema:URL ;
+    rdfs:comment "An associated logo." ;
+    rdfs:subPropertyOf schema:image .
+
+schema:startDate a rdf:Property ;
+    rdfs:label "startDate" ;
+    schema:domainIncludes schema:CreativeWorkSeason,
+        schema:CreativeWorkSeries,
+        schema:DatedMoneySpecification,
+        schema:Event,
+        schema:Role ;
+    schema:rangeIncludes schema:Date,
+        schema:DateTime ;
+    rdfs:comment "The start date and time of the item (in <a href=\"http://en.wikipedia.org/wiki/ISO_8601\">ISO 8601 date format</a>)." .
+
+schema:endDate a rdf:Property ;
+    rdfs:label "endDate" ;
+    schema:domainIncludes schema:CreativeWorkSeason,
+        schema:CreativeWorkSeries,
+        schema:DatedMoneySpecification,
+        schema:Event,
+        schema:Role ;
+    schema:rangeIncludes schema:Date,
+        schema:DateTime ;
+    rdfs:comment "The end date and time of the item (in <a href=\"http://en.wikipedia.org/wiki/ISO_8601\">ISO 8601 date format</a>)." .
+
+schema:learningResourceType a rdf:Property ;
+    rdfs:label "learningResourceType" ;
+    schema:domainIncludes schema:CreativeWork ;
+    schema:rangeIncludes schema:Text ;
+    rdfs:comment "The predominant type or kind characterizing the learning resource. For example, 'presentation', 'handout'." .
+
+schema:license a rdf:Property ;
+    rdfs:label "license" ;
+    schema:domainIncludes schema:CreativeWork ;
+    schema:rangeIncludes schema:CreativeWork,
+        schema:URL ;
+    rdfs:comment "A license document that applies to this content, typically indicated by URL." .
+
+schema:datePublished a rdf:Property ;
+    rdfs:label "datePublished" ;
+    schema:domainIncludes schema:CreativeWork ;
+    schema:rangeIncludes schema:Date ;
+    rdfs:comment "Date of first broadcast/publication." .
+
+schema:version a rdf:Property ;
+    rdfs:label "version" ;
+    schema:domainIncludes schema:CreativeWork ;
+    schema:rangeIncludes schema:Number,
+        schema:Text ;
+    rdfs:comment "The version of the CreativeWork embodied by a specified resource." .
+
+schema:review a rdf:Property ;
+    rdfs:label "review" ;
+    schema:domainIncludes schema:Brand,
+        schema:CreativeWork,
+        schema:Event,
+        schema:Offer,
+        schema:Organization,
+        schema:Place,
+        schema:Product,
+        schema:Service ;
+    schema:rangeIncludes schema:Review ;
+    rdfs:comment "A review of the item." .
+
+schema:thumbnailUrl a rdf:Property ;
+    rdfs:label "thumbnailUrl" ;
+    schema:domainIncludes schema:CreativeWork ;
+    schema:rangeIncludes schema:URL ;
+    rdfs:comment "A thumbnail image relevant to the Thing." .
+
+schema:timeRequired a rdf:Property ;
+    rdfs:label "timeRequired" ;
+    schema:domainIncludes schema:CreativeWork ;
+    schema:rangeIncludes schema:Duration ;
+    rdfs:comment "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. 'P30M', 'P1H25M'." .
+
+schema:price a rdf:Property ;
+    rdfs:label "price" ;
+    schema:domainIncludes schema:Offer,
+        schema:PriceSpecification,
+        schema:TradeAction ;
+    schema:rangeIncludes schema:Number,
+        schema:Text ;
+    rdfs:comment """The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.<br/><br/>
+
+Usage guidelines:<br/><br/>
+
+<ul>
+<li>Use the <a class="localLink" href="http://schema.org/priceCurrency">priceCurrency</a> property (with standard formats: <a href="http://en.wikipedia.org/wiki/ISO_4217">ISO 4217 currency format</a> e.g. "USD"; <a href="https://en.wikipedia.org/wiki/List_of_cryptocurrencies">Ticker symbol</a> for cryptocurrencies e.g. "BTC"; well known names for <a href="https://en.wikipedia.org/wiki/Local_exchange_trading_system">Local Exchange Tradings Systems</a> (LETS) and other currency types e.g. "Ithaca HOUR") instead of including <a href="http://en.wikipedia.org/wiki/Dollar_sign#Currencies_that_use_the_dollar_or_peso_sign">ambiguous symbols</a> such as '$' in the value.</li>
+<li>Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.</li>
+<li>Note that both <a href="http://www.w3.org/TR/xhtml-rdfa-primer/#using-the-content-attribute">RDFa</a> and Microdata syntax allow the use of a "content=" attribute for publishing simple machine-readable values alongside more human-friendly formatting.</li>
+<li>Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode symbols.</li>
+</ul>
+""" .
+
+schema:priceCurrency a rdf:Property ;
+    rdfs:label "priceCurrency" ;
+    schema:domainIncludes schema:Offer,
+        schema:PriceSpecification,
+        schema:Reservation,
+        schema:Ticket ;
+    schema:rangeIncludes schema:Text ;
+    rdfs:comment """The currency of the price, or a price component when attached to <a class="localLink" href="http://schema.org/PriceSpecification">PriceSpecification</a> and its subtypes.<br/><br/>
+
+Use standard formats: <a href="http://en.wikipedia.org/wiki/ISO_4217">ISO 4217 currency format</a> e.g. "USD"; <a href="https://en.wikipedia.org/wiki/List_of_cryptocurrencies">Ticker symbol</a> for cryptocurrencies e.g. "BTC"; well known names for <a href="https://en.wikipedia.org/wiki/Local_exchange_trading_system">Local Exchange Tradings Systems</a> (LETS) and other currency types e.g. "Ithaca HOUR".""" .
+
+schema:ratingCount a rdf:Property ;
+    rdfs:label "ratingCount" ;
+    schema:domainIncludes schema:AggregateRating ;
+    schema:rangeIncludes schema:Integer ;
+    rdfs:comment "The count of total number of ratings." .
+
+schema:bestRating a rdf:Property ;
+    rdfs:label "bestRating" ;
+    schema:domainIncludes schema:Rating ;
+    schema:rangeIncludes schema:Number,
+        schema:Text ;
+    rdfs:comment "The highest value allowed in this rating system. If bestRating is omitted, 5 is assumed." .
+
+schema:worstRating a rdf:Property ;
+    rdfs:label "worstRating" ;
+    schema:domainIncludes schema:Rating ;
+    schema:rangeIncludes schema:Number,
+        schema:Text ;
+    rdfs:comment "The lowest value allowed in this rating system. If worstRating is omitted, 1 is assumed." .
+
+schema:ratingValue a rdf:Property ;
+    rdfs:label "ratingValue" ;
+    schema:domainIncludes schema:Rating ;
+    schema:rangeIncludes schema:Number,
+        schema:Text ;
+    rdfs:comment "The rating for the content." .
+
+schema:text a rdf:Property ;
+    rdfs:label "text" ;
+    schema:domainIncludes schema:CreativeWork ;
+    schema:rangeIncludes schema:Text ;
+    rdfs:comment "The textual content of this CreativeWork." .
+
+schema:contentSize a rdf:Property ;
+    rdfs:label "contentSize" ;
+    schema:domainIncludes schema:MediaObject ;
+    schema:rangeIncludes schema:Text ;
+    rdfs:comment "File size in (mega/kilo) bytes." .
+    
+schema:contentUrl a rdf:Property ;
+    rdfs:label "contentUrl" ;
+    schema:domainIncludes schema:MediaObject ;
+    schema:rangeIncludes schema:URL ;
+    rdfs:comment "Actual bytes of the media object, for example the image file or video file." .
+
+schema:encodingFormat a rdf:Property ;
+    rdfs:label "encodingFormat" ;
+    schema:domainIncludes schema:CreativeWork,
+        schema:MediaObject ;
+    schema:rangeIncludes schema:Text,
+        schema:URL ;
+    rdfs:comment """Media type typically expressed using a MIME format (see <a href="http://www.iana.org/assignments/media-types/media-types.xhtml">IANA site</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MDN reference</a>) e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc.).<br/><br/>
+
+In cases where a <a class="localLink" href="http://schema.org/CreativeWork">CreativeWork</a> has several media type representations, <a class="localLink" href="http://schema.org/encoding">encoding</a> can be used to indicate each <a class="localLink" href="http://schema.org/MediaObject">MediaObject</a> alongside particular <a class="localLink" href="http://schema.org/encodingFormat">encodingFormat</a> information.<br/><br/>
+
+Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.""" .
+
+schema:width a rdf:Property ;
+    rdfs:label "width" ;
+    schema:domainIncludes schema:MediaObject,
+        schema:Product,
+        schema:VisualArtwork ;
+    schema:rangeIncludes schema:Distance,
+        schema:QuantitativeValue ;
+    rdfs:comment "The width of the item." .
+
+schema:height a rdf:Property ;
+    rdfs:label "height" ;
+    schema:domainIncludes schema:MediaObject,
+        schema:Person,
+        schema:Product,
+        schema:VisualArtwork ;
+    schema:rangeIncludes schema:Distance,
+        schema:QuantitativeValue ;
+    rdfs:comment "The height of the item." .
+
+schema:duration a rdf:Property ;
+    rdfs:label "duration" ;
+    schema:domainIncludes schema:Event,
+        schema:MediaObject,
+        schema:Movie,
+        schema:MusicRecording,
+        schema:MusicRelease ;
+    schema:rangeIncludes schema:Duration ;
+    rdfs:comment "The duration of the item (movie, audio recording, event, etc.) in <a href=\"http://en.wikipedia.org/wiki/ISO_8601\">ISO 8601 date format</a>." .
+
+schema:provider a rdf:Property ;
+    rdfs:label "provider" ;
+    schema:domainIncludes schema:CreativeWork,
+        schema:Invoice,
+        schema:ParcelDelivery,
+        schema:Reservation,
+        schema:Service,
+        schema:Trip ;
+    schema:rangeIncludes schema:Organization,
+        schema:Person ;
+    rdfs:comment "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller." .
+
+schema:genre a rdf:Property ;
+    rdfs:label "genre" ;
+    schema:domainIncludes schema:BroadcastChannel,
+        schema:CreativeWork,
+        schema:MusicGroup ;
+    schema:rangeIncludes schema:Text,
+        schema:URL ;
+    rdfs:comment "Genre of the creative work, broadcast channel or group." .
+
+schema:member a rdf:Property ;
+    rdfs:label "member" ;
+    schema:domainIncludes schema:Organization,
+        schema:ProgramMembership ;
+    schema:inverseOf schema:memberOf ;
+    schema:rangeIncludes schema:Organization,
+        schema:Person ;
+    rdfs:comment "A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals." .
+
+schema:memberOf a rdf:Property ;
+    rdfs:label "memberOf" ;
+    schema:domainIncludes schema:Organization,
+        schema:Person ;
+    schema:inverseOf schema:member ;
+    schema:rangeIncludes schema:Organization,
+        schema:ProgramMembership ;
+    rdfs:comment "An Organization (or ProgramMembership) to which this Person or Organization belongs." .
+
+schema:author a rdf:Property ;
+    rdfs:label "author" ;
+    schema:domainIncludes schema:CreativeWork,
+        schema:Rating ;
+    schema:rangeIncludes schema:Organization,
+        schema:Person ;
+    rdfs:comment "The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably." .
+
+schema:instructor a rdf:Property ;
+    rdfs:label "instructor" ;
+    schema:domainIncludes schema:CourseInstance ;
+    schema:rangeIncludes schema:Person ;
+    rdfs:comment "A person assigned to instruct or provide instructional assistance for the <a class=\"localLink\" href=\"http://schema.org/CourseInstance\">CourseInstance</a>." .
+
+schema:offers a rdf:Property ;
+    rdfs:label "offers" ;
+    schema:domainIncludes schema:AggregateOffer,
+        schema:CreativeWork,
+        schema:Event,
+        schema:MenuItem,
+        schema:Product,
+        schema:Service,
+        schema:Trip ;
+    schema:rangeIncludes schema:Offer ;
+    rdfs:comment "An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event." .
+
+schema:subtitleLanguage a rdf:Property ;
+    rdfs:label "subtitleLanguage" ;
+    schema:domainIncludes schema:Movie,
+        schema:ScreeningEvent,
+        schema:TVEpisode ;
+    schema:rangeIncludes schema:Language,
+        schema:Text ;
+    rdfs:comment "Languages in which subtitles/captions are available, in <a href=\"http://tools.ietf.org/html/bcp47\">IETF BCP 47 standard format</a>." .
+
+schema:inLanguage a rdf:Property ;
+    rdfs:label "inLanguage" ;
+    schema:domainIncludes schema:CommunicateAction,
+        schema:CreativeWork,
+        schema:Event,
+        schema:WriteAction ;
+    schema:rangeIncludes schema:Language,
+        schema:Text ;
+    rdfs:comment "The language of the content or performance or used in an action. Please use one of the language codes from the <a href=\"http://tools.ietf.org/html/bcp47\">IETF BCP 47 standard</a>. See also <a class=\"localLink\" href=\"http://schema.org/availableLanguage\">availableLanguage</a>." .
+
+schema:aggregateRating a rdf:Property ;
+    rdfs:label "aggregateRating" ;
+    schema:domainIncludes schema:Brand,
+        schema:CreativeWork,
+        schema:Event,
+        schema:Offer,
+        schema:Organization,
+        schema:Place,
+        schema:Product,
+        schema:Service ;
+    schema:rangeIncludes schema:AggregateRating ;
+    rdfs:comment "The overall rating, based on a collection of reviews or ratings, of the item." .
+
+schema:hasPart a rdf:Property ;
+    rdfs:label "hasPart" ;
+    dct:source <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex> ;
+    schema:domainIncludes schema:CreativeWork ;
+    schema:inverseOf schema:isPartOf ;
+    schema:rangeIncludes schema:CreativeWork ;
+    rdfs:comment "Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense)." .
+
+schema:isPartOf a rdf:Property ;
+    rdfs:label "isPartOf" ;
+    schema:domainIncludes schema:CreativeWork ;
+    schema:inverseOf schema:hasPart ;
+    schema:rangeIncludes schema:CreativeWork ;
+    rdfs:comment "Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of." .
+
+schema:comment a rdf:Property ;
+    rdfs:label "comment" ;
+    schema:domainIncludes schema:CreativeWork,
+        schema:RsvpAction ;
+    schema:rangeIncludes schema:Comment ;
+    rdfs:comment "Comments, typically from users." .
+
+schema:audience a rdf:Property ;
+    rdfs:label "audience" ;
+    schema:domainIncludes schema:CreativeWork,
+        schema:Event,
+        schema:LodgingBusiness,
+        schema:PlayAction,
+        schema:Product,
+        schema:Service ;
+    schema:rangeIncludes schema:Audience ;
+    rdfs:comment "An intended audience, i.e. a group for whom something was created." .
+
+schema:thumbnail a rdf:Property ;
+    rdfs:label "thumbnail" ;
+    schema:domainIncludes schema:ImageObject,
+        schema:VideoObject ;
+    schema:rangeIncludes schema:ImageObject ;
+    rdfs:comment "Thumbnail image for an image or video." .
+
+schema:transcript a rdf:Property ;
+    rdfs:label "transcript" ;
+    schema:domainIncludes schema:AudioObject,
+        schema:VideoObject ;
+    schema:rangeIncludes schema:Text ;
+    rdfs:comment "If this MediaObject is an AudioObject or VideoObject, the transcript of that object." .
+
+erudite:enables a rdf:Property ;
+    rdfs:label "enables" ;
+    schema:domainIncludes schema:CreativeWork ;
+    schema:rangeIncludes schema:CreativeWork ;
+    rdfs:comment "Indicates that the mastery/completion of a work can enable understanding of another. Similar to schema:coursePrerequisites, but at the CreativeWork level." .
+
+erudite:provides a rdf:Property ;
+    rdfs:label "provides" ;
+    schema:domainIncludes schema:CreativeWork ;
+    schema:inverseOf schema:provider ;
+    schema:rangeIncludes schema:CreativeWork ;
+    rdfs:comment "Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of." .
+
+erudite:syllabus a rdf:Property ;
+    rdfs:label "syllabus" ;
+    schema:domainIncludes schema:Course ;
+    schema:rangeIncludes schema:Text ;
+    rdfs:comment "Captures the syllabus text (i.e. the order and structure in which concepts are taught) for a Course." .
+
+erudite:dateIndexed a rdf:Property ;
+    rdfs:label "dateIndexed" ;
+    schema:domainIncludes schema:CreativeWork ;
+    schema:rangeIncludes schema:Date ;
+    rdfs:comment "Date of first appearance of resource on TCC Web Portal, which is the interface to interact with ERuDIte resources and materials" .
