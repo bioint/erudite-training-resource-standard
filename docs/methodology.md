@@ -6,7 +6,7 @@ and properties from multiple standards, specifically:
 - [Learning Resource Metadata Initiative](http://lrmi.dublincore.net)
 - [IEEE's Learning Object Metadata](https://standards.ieee.org/findstds/standard/1484.12.1-2002.html)
 - [eXchanging Course Related Information](http://shop.bsigroup.com/ProductDetail/?pid=000000000030259242)
-- [Metadata for Learning Opportunities](https://joinup.ec.europa.eu/catalogue/asset\_release/metadata-learning-opportunities-mlo-advertising)
+- [Metadata for Learning Opportunities](https://joinup.ec.europa.eu/solution/metadata-learning-opportunities-mlo-advertising/about)
 - [Schema.org](https://schema.org/)
 
 However, in beginning our collaboration with [ELIXIR TeSS](https://tess.elixir-europe.org/), an
