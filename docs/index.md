@@ -26,6 +26,14 @@ Examples of our metadata standard in action can be found as:
 1. embedded JSON-LD snippets in the source of each resource webpage. See source of [example resource page](https://bigdatau.ini.usc.edu/resource/14783120385630643790).
 2. data exports on Zenodo - [https://doi.org/10.5281/zenodo.1214375](https://doi.org/10.5281/zenodo.1214375)
 
+## License
+Given that the ERuDIte Training Resource Metadata Standard has its foundations in Schema.org,
+our standard is also licensed under the Creative Commons Attribution-ShareAlike License (version 3.0). 
+The license is available at: [http://creativecommons.org/licenses/by-sa/3.0/](http://creativecommons.org/licenses/by-sa/3.0/). 
+
+Please see [Schema.org's terms](https://schema.org/docs/terms.html) for additional details
+regarding the Creative Commons Attribution-ShareAlike License (version 3.0) in their domain. 
+
 ## Contact
 We'd love to hear from you! File a bug, new feature idea, or question on our 
 [Github repository](https://github.com/bioint/erudite-training-resource-standard).
@@ -33,5 +41,5 @@ We'd love to hear from you! File a bug, new feature idea, or question on our
 ### More About ERuDIte
 To learn more about ERuDIte and its aims to support continuous online learning for data science, visit [http://bigdatau.org/about_erudite](http://bigdatau.org/about_erudite).
 
-##### This work is supported by the National Institutes of Health under Grant 1U24ES026465-01.
+##### This work is supported by the National Institutes of Health under Grant 1U24ES026465.
 
