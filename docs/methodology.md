@@ -24,7 +24,7 @@ and ERuDIte, but also allowed us to use a standard that is supported and develop
 thus increasing the discovery of ERuDIte's contents overall.
 
 As expected, there are properties in our metadata standard that are ERuDIte specific. 
-Please see Specifications]({{ "specifications.html" | absolute_url }}) for more details. 
+Please see [Specifications]({{ "specifications.html" | absolute_url }}) for more details. 
 
 ## References
 - [Bioschemas.org Training Material Specification](http://bioschemas.org/specifications/TrainingMaterial/specification/) 
