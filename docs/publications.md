@@ -1,13 +1,16 @@
 ## Publications
 Below is a list of publications in which the ERuDIte Training Resource Metadata Specification
 is discussed: 
-1. BD2K Training Coordinating Center's ERuDIte: the Educational Resource Discovery Index for Data Science. 
+1. Linking Educational Resources on Data Science.
+José Luis Ambite, Jonathan Gordon, Lily Fierro, Gully A. Burns, Joel Mathew.
+The Thirty-First Annual Conference on Innovative Applications of Artificial Intelligence (IAAI-19). 2019. in press. 
+2. BD2K Training Coordinating Center's ERuDIte: the Educational Resource Discovery Index for Data Science. 
 José Luis Ambite, Lily Fierro, Jonathan Gordon, Gully A. Burns, Florian Geigl, Kristina Lerman, John D. Van Horn.
 IEEE Transactions on Emerging Topics in Computing. 2018. in press.
-2. [Democratizing data science through data science training.](https://doi.org/10.1142/9789813235533_0027)
+3. [Democratizing data science through data science training.](https://doi.org/10.1142/9789813235533_0027)
 John D. Van Horn, Lily Fierro, Jeana Kamdar, Jonathan Gordon, Crystal Stewart, Avnish Bhattrai, Sumiko Abe, Xiaoxiao Lei, Caroline O’Driscoll, Aakanchha Sinha, Priyambada Jain, Gully Burns, Kristina Lerman, José Luis Ambite.
 Biocomputing 2018, Proceedings of the Pacific Symposium. Kohala Coast, HI, 2018.
-3. [BD2K ERuDIte: the Educational Resource Discovery Index for Data Science.](https://dl.acm.org/citation.cfm?id=3053060) 
+4. [BD2K ERuDIte: the Educational Resource Discovery Index for Data Science.](https://dl.acm.org/citation.cfm?id=3053060) 
 José Luis Ambite, Kristina Lerman, Lily Fierro, Florian Geigl, Jonathan Gordon, Gully A. Burns, John D. Van Horn 
 Proceedings of the 26th International Conference on World Wide Web. WWW'17 Companion. (The 4th WWW Workshop on Big Scholarly Data: Towards the Web of Scholars). Perth, Australia, 2017.
 doi:10.1145/3041021.3053060.BD2K
