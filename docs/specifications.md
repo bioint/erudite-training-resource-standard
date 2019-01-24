@@ -31,4 +31,4 @@ Ontology, see [https://bioint.github.io/DSEO/](https://bioint.github.io/DSEO/).
 
 ### Visualization
 Below is the ERuDIte Training Resource Metadata Standard as a UML diagram for a visual representation of our standard definition. 
-[![schemauml]({{ "/assets/schema-uml/SchemaOrg-06-06-17-1525-300dpi.png" | absolute_url }})]({{ "/assets/schema-uml/SchemaOrg-06-06-17-1525-300dpi.png" | absolute_url }})
+[![schemauml]({{ "/assets/schema-uml/SchemaOrg-2018-10-15-final-300dpi.png" | absolute_url }})]({{ "/assets/schema-uml/SchemaOrg-06-06-17-1525-300dpi.png" | absolute_url }})
