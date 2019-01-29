@@ -20,7 +20,7 @@ doi:10.1145/3041021.3053060.BD2K
 ## Presentations
 Below is a list of presentations where the ERuDIte Training Resource Metadata Specification
 was discussed: 
-1. [The BD2K Training Coordinating Center’s Data Science Education Platform](https://knowledge.amia.org/65881-amia-1.3897810/t006-1.3900376/f006-1.3900377/2731974-1.3900447/2731974-1.3900448?qr=1).
+1. [The BD2K Training Coordinating Center’s Data Science Education Platform](https://knowledge.amia.org/65881-amiab-1.4254737/t006-1.4257302/f006-1.4257303/2731974-1.4257373/2731974-1.4257374?qr=1).
 José Luis Ambite,  Lily Fierro, Florian Geigl Jonathan Gordon, Gully A. Burns Kristina Lerman ; Jeana Kamdar, Crystal Stewart, Avnish Bhattrai, Xiaoyu Lei, Sumiko Abe, John D. Van Horn.
 Systems Demonstration at AMIA Annual Symposium 2017, Washington, DC, USA, 2017.
 2. [Using Data Science to Teach Data Science](https://www.youtube.com/watch?v=kk-2D-HC7t0). 
