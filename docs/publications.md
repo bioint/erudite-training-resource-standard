@@ -3,7 +3,7 @@ Below is a list of publications in which the ERuDIte Training Resource Metadata 
 is discussed: 
 1. Linking Educational Resources on Data Science.
 José Luis Ambite, Jonathan Gordon, Lily Fierro, Gully A. Burns, Joel Mathew.
-The Thirty-First Annual Conference on Innovative Applications of Artificial Intelligence (IAAI-19). 2019. in press. 
+The Thirty-Third Annual Conference on Innovative Applications of Artificial Intelligence (IAAI-19). 2019. in press. 
 2. BD2K Training Coordinating Center's ERuDIte: the Educational Resource Discovery Index for Data Science. 
 José Luis Ambite, Lily Fierro, Jonathan Gordon, Gully A. Burns, Florian Geigl, Kristina Lerman, John D. Van Horn.
 IEEE Transactions on Emerging Topics in Computing. 2018. in press.
